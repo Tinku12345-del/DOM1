@@ -1,0 +1,58 @@
+<html>
+
+	<head>
+		<style>
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float:left;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+	</head>
+	
+	
+	<body>
+		<div class="container">
+	<input type="text" id="input" placeholder="Enter your text"><br><br><br>
+  <input type="submit" id="btn" value="Click here"><br><br><br><br>
+	<div id="para">
+		<ul id="ul1"></ul>
+	</div>
+</div>
+	</body>
+	<script type="text/javascript">
+		var e=document.getElementById('input')
+		var e1=document.getElementById('btn')
+		var e2=document.getElementById('ul1')
+		e1.addEventListener('click',append)
+		function append()
+		{
+			var e3=document.createElement('li')
+			e2.appendChild(e3)
+			e3.textContent=e.value
+			console.log(e2)
+		}
+	</script>
+	
+</html>
